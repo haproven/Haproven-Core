@@ -57,6 +57,7 @@ we build **systems, experiences, and long-term solutions**.
 
 ## 🌐 Explore Haproven
 
+* 🔗 **profile:** https://haproven-core.netlify.app/
 * 🔗 **Main Platform:** https://haproven.netlify.app/
 * 💻 **GitHub Organization:** https://github.com/haproven
 * 🚀 **Projects:** https://github.com/haproven/haproven
