@@ -9,10 +9,10 @@
             "id": "pro-susheel-01",
             "username": "susheel",
             "name": "susheel",
-            "email": "demo@haproven.com",
+            "email": "susheel@haproven.com",
             "password": "123456",
-            "image": "https://i.pravatar.cc/150?img=12",
-            "role": "Developer"
+            "image": "https://haproid.netlify.app/assets/img/user/pro-susheel-01/susheel.webp",
+            "role": "Founder"
         }
     ]
 }
