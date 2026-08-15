@@ -5,18 +5,44 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 
 
-/*============================================================
-////////     live-btata hai con sa page par ho      //////////
-============================================================*/
+// ============================================================
+// LIVE PAGE TITLE
+// Shows which page the user is currently on
+// ============================================================
 
-document.addEventListener('DOMContentLoaded', () => {
-    const pageDisplay = document.getElementById('liv-open-page');
-    if (pageDisplay) {
-        // Current Document Title dikhane ke liye
-        pageDisplay.textContent = `You are on: ${document.title} page.`;
+(function () {
+
+    function loadLivePage() {
+
+        const pageDisplay =
+            document.getElementById("liv-open-page");
+
+        if (!pageDisplay) return;
+
+        pageDisplay.textContent =
+            `You are on: ${document.title} page.`;
+
     }
-});
 
+
+    // DOM अभी load हो रहा है
+    if (document.readyState === "loading") {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            loadLivePage
+        );
+
+    }
+
+    // DOM पहले से load हो चुका है
+    else {
+
+        loadLivePage();
+
+    }
+
+})();
 
 
 
