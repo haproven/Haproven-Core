@@ -22,6 +22,22 @@ window.addEventListener('scroll', () => {
 
 
 
+/*============================================================
+////////     live-btata hai con sa page par ho      //////////
+============================================================*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const pageDisplay = document.getElementById('liv-open-page');
+    if (pageDisplay) {
+        // Current Document Title dikhane ke liye
+        pageDisplay.textContent = `You are on: ${document.title} page.`;
+    }
+});
+
+
+
+
+
 
 
 
