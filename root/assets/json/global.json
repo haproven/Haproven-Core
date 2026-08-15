@@ -83,19 +83,9 @@
       "icon": "fa-brands fa-x-twitter",
       "is_active": true
     }
-  ],
+  ]
 
 
-  [
-    {
-        "id": "pro-demo-01",
-        "username": "demo",
-        "name": "Demo User",
-        "email": "demo@haproven.com",
-        "password": "123456",
-        "image": "https://i.pravatar.cc/150?img=12",
-        "role": "Developer"
-    }
-]
+
 
 }
