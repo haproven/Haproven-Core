@@ -11,38 +11,29 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // ============================================================
 
 (function () {
-
     function loadLivePage() {
-
         const pageDisplay =
             document.getElementById("liv-open-page");
-
         if (!pageDisplay) return;
-
         pageDisplay.textContent =
             `You are on: ${document.title} page.`;
-
     }
-
-
     // DOM अभी load हो रहा है
     if (document.readyState === "loading") {
-
         document.addEventListener(
             "DOMContentLoaded",
             loadLivePage
         );
-
     }
-
     // DOM पहले से load हो चुका है
     else {
-
         loadLivePage();
-
     }
-
 })();
+
+
+
+
 
 
 
