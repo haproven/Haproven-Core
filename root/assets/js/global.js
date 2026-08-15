@@ -5,6 +5,23 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 
 
+/*============================================================
+////////     live-btata hai con sa page par ho      //////////
+============================================================*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const pageDisplay = document.getElementById('liv-open-page');
+    if (pageDisplay) {
+        // Current Document Title dikhane ke liye
+        pageDisplay.textContent = `You are on: ${document.title} page.`;
+    }
+});
+
+
+
+
+
+
 let lastScrollTop = 0;
 const header = document.querySelector('#header');
 
@@ -18,20 +35,6 @@ window.addEventListener('scroll', () => {
     }
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
-
-
-
-/*============================================================
-////////     live-btata hai con sa page par ho      //////////
-============================================================*/
-
-document.addEventListener('DOMContentLoaded', () => {
-    const pageDisplay = document.getElementById('liv-open-page');
-    if (pageDisplay) {
-        // Current Document Title dikhane ke liye
-        pageDisplay.textContent = `You are on: ${document.title} page.`;
-    }
 });
 
 
