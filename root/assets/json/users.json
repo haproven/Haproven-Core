@@ -6,9 +6,9 @@
     
    "users": [
         {
-            "id": "pro-demo-01",
-            "username": "demo",
-            "name": "Demo User",
+            "id": "pro-susheel-01",
+            "username": "susheel",
+            "name": "susheel",
             "email": "demo@haproven.com",
             "password": "123456",
             "image": "https://i.pravatar.cc/150?img=12",
