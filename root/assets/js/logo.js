@@ -1,210 +1,214 @@
-
-
 (function () {
 
-    if (document.querySelector("#haproven-brand-style")) return;
+    /* =========================================================
+       PREVENT DUPLICATE STYLE
+    ========================================================= */
+
+    if (document.querySelector("#haproven-brand-style")) {
+        return;
+    }
+
+
+    /* =========================================================
+       BRAND CSS
+    ========================================================= */
 
     const style = document.createElement("style");
+
     style.id = "haproven-brand-style";
 
     style.innerHTML = `
 
-    :root {
-        --hap-purple: #bc1be7;
-    }
+        :root {
+            --hap-purple: #bc1be7;
+        }
 
-    .haproven-brand {
-        display: flex;
-        align-items: center;
-        width: max-content;
-        font-family: Inter, system-ui, sans-serif;
-        cursor: pointer;
-        user-select: none;
-        transition: transform .25s ease;
-    }
+        .haproven-brand {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            font-family: Inter, system-ui, sans-serif;
+            cursor: pointer;
+            user-select: none;
+            transition: transform .25s ease;
+        }
 
-    .haproven-brand:active {
-        transform: scale(.96);
-    }
+        .haproven-brand:active {
+            transform: scale(.96);
+        }
 
-    /* ICON */
-    .haproven-icon {
-        position: relative;
-        width: 36px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        transition: transform .3s ease;
-    }
+        .haproven-icon {
+            position: relative;
+            width: 36px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform .3s ease;
+        }
 
-    .haproven-brand:hover .haproven-icon {
-        transform: scale(1.04);
-    }
+        .haproven-brand:hover .haproven-icon {
+            transform: scale(1.04);
+        }
 
-    /* SHADOW */
-    .shadow-layer {
-        position: absolute;
-        width: 33px;
-        height: 45px;
-        top: -2px;
-        left: -2px;
-        opacity: .35;
+        .shadow-layer {
+            position: absolute;
+            width: 33px;
+            height: 45px;
+            top: -2px;
+            left: -2px;
+            opacity: .35;
 
-        background:
-            linear-gradient(
-                135deg,
-                var(--hap-purple),
-                #ffffff55
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--hap-purple),
+                    #ffffff55
+                );
+
+            clip-path: polygon(
+                0 0,
+                100% 0,
+                100% 100%,
+                50% 88%,
+                0 100%
             );
 
-        clip-path: polygon(
-            0 0,
-            100% 0,
-            100% 100%,
-            50% 88%,
-            0 100%
-        );
+            border-radius: 6px 6px 0 0;
+        }
 
-        border-radius: 6px 6px 0 0;
-    }
+        .main-bookmark {
+            position: relative;
+            width: 30px;
+            height: 42px;
 
-    /* MAIN ICON */
-    .main-bookmark {
-        position: relative;
-        width: 30px;
-        height: 42px;
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--hap-purple),
+                    #d94dff
+                );
 
-        background:
-            linear-gradient(
-                135deg,
-                var(--hap-purple),
-                #d94dff
+            clip-path: polygon(
+                0 0,
+                100% 0,
+                100% 100%,
+                50% 88%,
+                0 100%
             );
 
-        clip-path: polygon(
-            0 0,
-            100% 0,
-            100% 100%,
-            50% 88%,
-            0 100%
-        );
+            border-radius: 6px 6px 0 0;
 
-        border-radius: 6px 6px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+            z-index: 2;
 
-        z-index: 2;
+            box-shadow:
+                0 7px 16px rgba(188, 27, 231, .30);
+        }
 
-        box-shadow:
-            0 7px 16px rgba(188, 27, 231, .30);
-    }
+        .haproven-icon svg {
+            width: 32px;
+            height: 32px;
+            margin-right: -4px;
+            fill: none;
+        }
 
-    /* SVG */
-    .haproven-icon svg {
-        width: 32px;
-        height: 32px;
-        margin-right: -4px;
-        fill: none;
-    }
+        .path-line {
+            stroke: #fff;
+            stroke-width: 6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
 
-    .path-line {
-        stroke: #fff;
-        stroke-width: 6;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-
-        stroke-dasharray: 260;
-        stroke-dashoffset: 260;
-
-        animation:
-            hapDraw 2.8s ease-in-out infinite;
-    }
-
-    /* TEXT BAR */
-    .brand-bar {
-        min-height: 30px;
-
-        padding: 2px 7px;
-
-        display: flex;
-        align-items: center;
-
-        margin-left: -2px;
-
-        border-radius: 0 8px 8px 0;
-
-        border: 2px solid var(--hap-purple);
-        border-left: none;
-
-        background: rgba(10, 10, 10, .88);
-
-        backdrop-filter: blur(10px);
-    }
-
-    .brand-text {
-        display: flex;
-        flex-direction: column;
-        line-height: 1;
-    }
-
-    .brand-text strong {
-        font-size: 11px;
-        font-weight: 900;
-        color: #fff;
-        letter-spacing: .25px;
-    }
-
-    .brand-text small {
-        font-size: 8px;
-        font-weight: 600;
-        opacity: .7;
-        margin-top: 2px;
-        letter-spacing: .3px;
-        text-transform: uppercase;
-    }
-
-    /* HOVER */
-    .haproven-brand:hover .main-bookmark {
-        box-shadow:
-            0 0 18px rgba(188, 27, 231, .55),
-            0 7px 20px rgba(188, 27, 231, .25);
-    }
-
-    /* ICON ONLY */
-    .haproven-brand.icon-only .brand-bar {
-        display: none;
-    }
-
-    /* ANIMATION */
-    @keyframes hapDraw {
-
-        0% {
+            stroke-dasharray: 260;
             stroke-dashoffset: 260;
-            opacity: .6;
+
+            animation:
+                hapDraw 2.8s ease-in-out infinite;
         }
 
-        50% {
-            stroke-dashoffset: 0;
-            opacity: 1;
+        .brand-bar {
+            min-height: 30px;
+
+            padding: 2px 7px;
+
+            display: flex;
+            align-items: center;
+
+            margin-left: -2px;
+
+            border-radius: 0 8px 8px 0;
+
+            border: 2px solid var(--hap-purple);
+            border-left: none;
+
+            background: rgba(10, 10, 10, .88);
+
+            backdrop-filter: blur(10px);
         }
 
-        100% {
-            stroke-dashoffset: -260;
-            opacity: .6;
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
         }
 
-    }
+        .brand-text strong {
+            font-size: 11px;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: .25px;
+        }
+
+        .brand-text small {
+            font-size: 8px;
+            font-weight: 600;
+            opacity: .7;
+            margin-top: 2px;
+            letter-spacing: .3px;
+            text-transform: uppercase;
+        }
+
+        .haproven-brand:hover .main-bookmark {
+            box-shadow:
+                0 0 18px rgba(188, 27, 231, .55),
+                0 7px 20px rgba(188, 27, 231, .25);
+        }
+
+        .haproven-brand.icon-only .brand-bar {
+            display: none;
+        }
+
+        @keyframes hapDraw {
+
+            0% {
+                stroke-dashoffset: 260;
+                opacity: .6;
+            }
+
+            50% {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+
+            100% {
+                stroke-dashoffset: -260;
+                opacity: .6;
+            }
+
+        }
 
     `;
 
     document.head.appendChild(style);
 
 
-    /* -------- BRAND HTML -------- */
+    /* =========================================================
+       BRAND HTML
+    ========================================================= */
 
     function initBrand(el) {
 
@@ -268,12 +272,34 @@
     }
 
 
-    document.addEventListener("DOMContentLoaded", () => {
+    /* =========================================================
+       START BRAND
+    ========================================================= */
+
+    function startHaprovenLogo() {
 
         document
             .querySelectorAll(".haproven-brand")
             .forEach(initBrand);
 
-    });
+    }
+
+
+    /* =========================================================
+       DOM READY / HUB SUPPORT
+    ========================================================= */
+
+    if (document.readyState === "loading") {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            startHaprovenLogo
+        );
+
+    } else {
+
+        startHaprovenLogo();
+
+    }
 
 })();
