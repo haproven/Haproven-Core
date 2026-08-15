@@ -14,13 +14,18 @@
       "img": "https://haproid.netlify.app/assets/img/haproid-icon.png"
     },
     {
-      "name": "Hapro..Core",
-      "url": "https://haproven-core.netlify.app/",
-      "img": "https://haproven.netlify.app/assets/img/haproven-logo.png"
-    },
-     {
       "name": "HaproShow",
       "url": "https://haprohow.netlify.app/",
+      "img": "https://haproven.netlify.app/assets/img/haproven-logo.png"
+    },
+      {
+      "name": "Hapro.Blog",
+      "url": "https://haproven-blog.netlify.app/",
+      "img": "https://haproven.netlify.app/assets/img/haproven-logo.png"
+    },
+    {
+      "name": "Hapro..Core",
+      "url": "https://haproven-core.netlify.app/",
       "img": "https://haproven.netlify.app/assets/img/haproven-logo.png"
     },
     {
@@ -42,12 +47,8 @@
       "name": "HaproAPI",
       "url": "https://haproapi.netlify.app/",
       "img": "https://haproven.netlify.app/assets/img/haproven-logo.png"
-    },
-    {
-      "name": "Hapro.Blog",
-      "url": "https://haproven-blog.netlify.app/",
-      "img": "https://haproven.netlify.app/assets/img/haproven-logo.png"
     }
+   
    
   ],
 
