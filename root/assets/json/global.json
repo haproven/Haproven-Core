@@ -4,6 +4,11 @@
   "liveText": "new day ho jya hai",
    "projects": [
     {
+      "name": "Haproven",
+      "url": "https://Haproven.netlify.app/",
+      "img": "https://Haproven.netlify.app/assets/img/Haproven-logo.png"
+    },
+    {
       "name": "HaproID",
       "url": "https://haproid.netlify.app/",
       "img": "https://haproid.netlify.app/assets/img/haproid-icon.png"
